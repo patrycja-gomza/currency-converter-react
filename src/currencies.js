@@ -15,3 +15,5 @@ const currencies = [
         rate: 4.15,
     },
 ];
+
+export default currencies;
