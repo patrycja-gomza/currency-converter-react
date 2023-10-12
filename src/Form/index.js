@@ -2,13 +2,13 @@ import "./style.css";
 import currencies from "../currencies";
 import { useState } from "react";
 
-const Form = () => {
-    const [currency, setCurrency] = useState("");
+const Form = ({ calculateResult }) => {
+    const [currency, setCurrency] = useState("CHF");
     const [amount, setAmount] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(selectedCurrency, amount);
+        calculateResult(currency, amount);
     };
 
     return (
