@@ -8,6 +8,7 @@ const Form = () => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        calculateResult(selectedCurrency, amount);
     };
 
     return (
