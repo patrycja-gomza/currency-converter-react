@@ -22,7 +22,7 @@ function App() {
   return (
     <Container>
       <Form calculateResult={calculateResult} />
-      <Result />
+      <Result result={result} />
       <Info />
     </Container>
   );

@@ -1,8 +1,10 @@
 import "./style.css";
 
-const Result = () => (
+const Result = ({ result }) => (
     <p className="result">
-        Kwota po przeliczeniu: <strong></strong>
+        Kwota po przeliczeniu: <strong>
+            {result ? result.resultElement.toFixed(2) : "0.00"} PLN
+        </strong>
     </p>
 );
 
