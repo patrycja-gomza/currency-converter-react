@@ -21,7 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - JavaScript ES6+ Features
 - React JS
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
-- Styled Components
+- Controlled Components
+- Media Queries
 - Immutability (approach for managing state)
 ## Status
 The site is dynamically growing, along with the new front-end programming skills I'm learning.
