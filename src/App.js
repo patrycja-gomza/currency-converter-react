@@ -1,7 +1,6 @@
 import Container from "./Container";
 import Form from "./Form";
 import Result from "./Result";
-import Info from "./Info";
 import currencies from "./currencies";
 import { useState } from "react";
 
@@ -23,7 +22,9 @@ function App() {
     <Container>
       <Form calculateResult={calculateResult} />
       <Result result={result} />
-      <Info />
+      <p className="container__info">
+        - Kursy pochodzą z dnia 06.05.2023 -
+      </p>
     </Container>
   );
 };
