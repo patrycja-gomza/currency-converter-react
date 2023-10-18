@@ -1,3 +1,4 @@
+import "./style.css";
 import { useState } from "react";
 
 const Clock = () => {
@@ -11,7 +12,7 @@ const Clock = () => {
     const formattedTime = currentDay.toLocaleTimeString();
 
     return (
-        <div>
+        <div className="clock">
             <p>Dzisiaj jest {formattedDate}, {formattedTime}</p>
         </div>
     );
