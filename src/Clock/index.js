@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 
 const Clock = () => {
     const [currentDay, setCurrentDay] = useState(new Date());
-    // I use the hook useState to store the current date
 
-    // I use hook useEffect to manage the time refresh interval and clean it up
     useEffect(() => {
         const intervalID = setInterval(() => {
             setCurrentDay(() => new Date());
