@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledClock } from "./styled";
 import { useCurrentDate } from "./useCurrentDate.js";
 
 const Clock = () => {
@@ -12,9 +12,9 @@ const Clock = () => {
     const formattedTime = currentDay.toLocaleTimeString();
 
     return (
-        <div className="clock">
+        <StyledClock>
             <p>Dzisiaj jest {formattedDate}, {formattedTime}</p>
-        </div>
+        </StyledClock>
     );
 };
 
