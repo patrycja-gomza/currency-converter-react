@@ -1,11 +1,11 @@
-import "./style.css";
+import { StyledResult } from "./styled";
 
 const Result = ({ result }) => (
-    <p className="result">
+    <StyledResult>
         Kwota po przeliczeniu: <strong>
             {result ? result.resultElement.toFixed(2) : "0.00"} PLN
         </strong>
-    </p>
+    </StyledResult>
 );
 
 export default Result;
