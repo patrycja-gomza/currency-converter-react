@@ -1,6 +1,6 @@
-import "./style.css";
 import currencies from "../currencies";
 import { useState } from "react";
+import { Fieldset, Legend, LabelTitle, StyledField, Container, Button } from "./styled";
 
 const Form = ({ calculateResult }) => {
     const [currency, setCurrency] = useState("CHF");
@@ -13,33 +13,33 @@ const Form = ({ calculateResult }) => {
 
     return (
         <form onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Kalkulator walut</legend>
+            <Fieldset>
+                <Legend>Kalkulator walut</Legend>
 
                 <p>
                     <label>
-                        <span className="form__label"> Wybierz walutę </span>
-                        <select
-                            className="form__field"
-                            onChange={(event) => setCurrency(event.target.value)}
-                        >
-                            {currencies.map((currency) => (
-                                <option
-                                    key={currency.description}
-                                    value={currency.name}
-                                >
-                                    {currency.name}
-                                </option>
-                            ))}
-                        </select>
+                        <LabelTitle> Wybierz walutę </LabelTitle>
+                            <StyledField
+                                as="select"
+                                onChange={(event) => setCurrency(event.target.value)}
+                            >
+                                {currencies.map((currency) => (
+                                    <option
+                                        key={currency.description}
+                                        value={currency.name}
+                                    >
+                                        {currency.name}
+                                    </option>
+                                ))}
+                            </StyledField>
                     </label>
                 </p>
 
                 <p>
                     <label>
-                        <span className="form__label"> Wpisz kwotę * </span>
-                        <input
-                            className="form__field"
+                        <LabelTitle> Wpisz kwotę * </LabelTitle>
+                        <StyledField
+                            as="input"
                             required type="number"
                             min="1"
                             step="any"
@@ -49,13 +49,13 @@ const Form = ({ calculateResult }) => {
                         />
                     </label>
                 </p>
-            </fieldset>
+            </Fieldset>
 
-            <p className="form__container">
-                <button className="form__button">
+            <Container>
+                <Button>
                     Przelicz!
-                </button>
-            </p>
+                </Button>
+            </Container>
         </form>
     );
 };
