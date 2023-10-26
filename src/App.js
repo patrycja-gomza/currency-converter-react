@@ -4,6 +4,7 @@ import Result from "./Result";
 import Clock from "./Clock";
 import currencies from "./currencies";
 import { useState } from "react";
+import { StyledInfo } from "./styled";
 
 function App() {
   const [result, setResult] = useState(0);
@@ -24,9 +25,9 @@ function App() {
       <Clock />
       <Form calculateResult={calculateResult} />
       <Result result={result} />
-      <p className="container__info">
+      <StyledInfo>
         - Kursy pochodzą z dnia 06.05.2023 -
-      </p>
+      </StyledInfo>
     </Container>
   );
 };
