@@ -14,16 +14,18 @@ After you fill the form, click the "Convert" button to get the amount in PLN.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Technologies
-- HTML / CSS / JavaScript
-- Block-Element-Modifier (BEM) convention
+- JSX (JavaScript XML)
 - Flexbox
 - CSS Grid
 - JavaScript ES6+ Features
-- React JS
+- React.js
 - Create React App (Webpack, Babel, ESLint, PostCSS, CSS Loader & Style Loader)
 - Controlled Components
+- Styled Components
 - Media Queries
-- Immutability (approach for managing state)
+- Custom Hooks
+- Local Storage
+
 ## Status
 The site is dynamically growing, along with the new front-end programming skills I'm learning.
 ## Inspiration
