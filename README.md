@@ -24,7 +24,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Styled Components
 - Media Queries
 - Custom Hooks
-- Local Storage
 
 ## Status
 The site is dynamically growing, along with the new front-end programming skills I'm learning.
