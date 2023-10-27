@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
     background-color: ${({ theme }) => theme.color.white};
     box-shadow: 0 0 30px ${({ theme }) => theme.color.black};
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: grid;
         grid-template-columns: 1fr;
     }

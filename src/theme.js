@@ -7,4 +7,7 @@ export const theme = {
         white: "#fff",
         crimson: "#dc143c",
     },
+    breakpoint: {
+        mobileMax: 768,
+    },
 };
