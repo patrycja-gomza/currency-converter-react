@@ -11,6 +11,7 @@ export const StyledContainer = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: grid;
         grid-template-columns: 1fr;
+        margin: 20px;
     }
 `;
 
