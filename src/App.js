@@ -1,10 +1,9 @@
-import Container from "./Container";
 import Form from "./Form";
 import Result from "./Result";
 import Clock from "./Clock";
 import currencies from "./currencies";
 import { useState } from "react";
-import { StyledInfo } from "./styled";
+import { StyledContainer, StyledInfo } from "./styled";
 
 function App() {
   const [result, setResult] = useState(0);
@@ -21,14 +20,14 @@ function App() {
   };
 
   return (
-    <Container>
+    <StyledContainer>
       <Clock />
       <Form calculateResult={calculateResult} />
       <Result result={result} />
       <StyledInfo>
         - Kursy pochodzą z dnia 06.05.2023 -
       </StyledInfo>
-    </Container>
+    </StyledContainer>
   );
 };
 
