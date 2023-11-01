@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
-export const useCurrencyConverter = () => {
+export const useRatesData = () => {
     const [ratesData, setRatesData] = useState(
         {loading: true}
     );

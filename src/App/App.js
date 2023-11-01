@@ -3,11 +3,11 @@ import Result from "./Result";
 import Clock from "./Clock";
 import { useState } from "react";
 import { StyledContainer, StyledInfo } from "./styled";
-import { useCurrencyConverter } from "./useCurrencyConverter";
+import { useRatesData } from "./useRatesData";
 import { useRatesDay } from "./useRatesDay";
 
 function App() {
-  const ratesData = useCurrencyConverter();
+  const ratesData = useRatesData();
   const formattedRatesDay = useRatesDay(ratesData);
 
   const [result, setResult] = useState(0);
