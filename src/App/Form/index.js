@@ -16,7 +16,7 @@ const Form = ({ calculateResult }) => {
         <form onSubmit={onFormSubmit}>
             <Fieldset>
                 <Legend>Kalkulator walut</Legend>
-
+                {ratesData.loading && <p>Sekundka... Ładuję kursy walut z Europejskiego Banku Centralnego...😎</p>}
                 <p>
                     <label>
                         <LabelTitle> Wybierz walutę </LabelTitle>
