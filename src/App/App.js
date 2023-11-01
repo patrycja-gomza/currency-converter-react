@@ -1,7 +1,6 @@
 import Form from "./Form";
 import Result from "./Result";
 import Clock from "./Clock";
-import currencies from "./currencies";
 import { useState } from "react";
 import { StyledContainer, StyledInfo } from "./styled";
 import { useCurrencyConverter } from "./useCurrencyConverter";
@@ -12,8 +11,8 @@ function App() {
   const [result, setResult] = useState(0);
 
   const calculateResult = (currency, amount) => {
-    const selectedCurrency = currencies.find(({ name }) => name === currency);
-    const conversionRate = selectedCurrency.rate;
+    const selectedCurrency = ratesData.data[currency];
+    const conversionRate = selectedCurrency.value;
 
     setResult({
       from: selectedCurrency,
