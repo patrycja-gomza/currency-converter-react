@@ -1,10 +1,11 @@
-import currencies from "../currencies";
 import { useState } from "react";
 import { Fieldset, Legend, LabelTitle, StyledField, Container, Button } from "./styled";
+import { useCurrencyConverter } from "../useCurrencyConverter";
 
 const Form = ({ calculateResult }) => {
     const [currency, setCurrency] = useState("CHF");
     const [amount, setAmount] = useState("");
+    const ratesData = useCurrencyConverter();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -19,19 +20,19 @@ const Form = ({ calculateResult }) => {
                 <p>
                     <label>
                         <LabelTitle> Wybierz walutę </LabelTitle>
-                            <StyledField
-                                as="select"
-                                onChange={(event) => setCurrency(event.target.value)}
-                            >
-                                {currencies.map((currency) => (
-                                    <option
-                                        key={currency.description}
-                                        value={currency.name}
-                                    >
-                                        {currency.name}
-                                    </option>
-                                ))}
-                            </StyledField>
+                        <StyledField
+                            as="select"
+                            onChange={(event) => setCurrency(event.target.value)}
+                        >
+                            {ratesData.data && Object.keys(ratesData.data).map((currency) => (
+                                <option
+                                    key={currency}
+                                    value={currency}
+                                >
+                                    {currency}
+                                </option>
+                            ))}
+                        </StyledField>
                     </label>
                 </p>
 
