@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Fieldset, Legend, LabelTitle, StyledField, Container, Button } from "./styled";
-import { useCurrencyConverter } from "../useCurrencyConverter";
 
-const Form = ({ calculateResult }) => {
+const Form = ({ calculateResult, ratesData }) => {
     const [currency, setCurrency] = useState("CHF");
     const [amount, setAmount] = useState("");
-    const ratesData = useCurrencyConverter();
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -16,7 +14,6 @@ const Form = ({ calculateResult }) => {
         <form onSubmit={onFormSubmit}>
             <Fieldset>
                 <Legend>Kalkulator walut</Legend>
-                {ratesData.loading && <p>Sekundka... Ładuję kursy walut z Europejskiego Banku Centralnego...😎</p>}
                 <p>
                     <label>
                         <LabelTitle> Wybierz walutę </LabelTitle>
