@@ -4,9 +4,11 @@ import Clock from "./Clock";
 import { useState } from "react";
 import { StyledContainer, StyledInfo } from "./styled";
 import { useCurrencyConverter } from "./useCurrencyConverter";
+import { useRatesDay } from "./useRatesDay";
 
 function App() {
   const ratesData = useCurrencyConverter();
+  const formattedRatesDay = useRatesDay(ratesData);
 
   const [result, setResult] = useState(0);
 
@@ -38,7 +40,9 @@ function App() {
           <Form calculateResult={calculateResult} ratesData={ratesData} />
           <Result result={result} />
           <StyledInfo>
-            - Kursy pochodzą z dnia 06.05.2023 -
+            Kursy walut pobierane są z Europejskiego Banku Centralnego
+            <br />
+            Aktualne na dzień: <strong>{formattedRatesDay}</strong>
           </StyledInfo>
         </>
       )}
