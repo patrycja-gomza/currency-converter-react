@@ -17,8 +17,9 @@ function App() {
     const conversionRate = selectedCurrency.value;
 
     setResult({
-      from: selectedCurrency,
+      from: selectedCurrency.code,
       to: "PLN",
+      prevElement: +amount,
       resultElement: +amount * conversionRate,
     });
   };
