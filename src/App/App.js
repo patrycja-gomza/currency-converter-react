@@ -1,28 +1,15 @@
 import Form from "./Form";
 import Result from "./Result";
 import Clock from "./Clock";
-import { useState } from "react";
 import { StyledContainer, StyledInfo } from "./styled";
 import { useRatesData } from "./useRatesData";
 import { useRatesDay } from "./useRatesDay";
+import { useResult } from "./useResult";
 
 function App() {
   const ratesData = useRatesData();
   const formattedRatesDay = useRatesDay(ratesData);
-
-  const [result, setResult] = useState(0);
-
-  const calculateResult = (currency, amount) => {
-    const selectedCurrency = ratesData.data[currency];
-    const conversionRate = selectedCurrency.value;
-
-    setResult({
-      from: selectedCurrency.code,
-      to: "PLN",
-      prevElement: +amount,
-      resultElement: +amount * conversionRate,
-    });
-  };
+  const { result, calculateResult } = useResult(ratesData);
 
   return (
     <StyledContainer>
