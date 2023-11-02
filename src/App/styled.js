@@ -18,6 +18,7 @@ export const StyledContainer = styled.div`
 export const StyledInfo = styled.p`
     text-align: center;
     color: ${({ theme }) => theme.color.silverChalice};
-    font-size: small;
+    font-size: smaller;
     font-style: italic;
+    line-height: 1.5;
 `;
