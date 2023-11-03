@@ -1,5 +1,5 @@
 # currency-converter-react by Patrycja Gomza
-![gif](https://github.com/patrycja-gomza/currency-converter-react/blob/main/src/gif/Animation2.gif?raw=true)
+![gif](https://raw.githubusercontent.com/patrycja-gomza/currency-converter-react/main/ReadmeAnimation%20.gif)
 
 ## Demo
 https://patrycja-gomza.github.io/currency-converter-react/
@@ -13,6 +13,10 @@ After you fill the form, click the "Convert" button to get the amount in PLN.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The app has loading and error state handling.
+
+![error png](https://raw.githubusercontent.com/patrycja-gomza/currency-converter-react/main/ReadmeError.png)
+
 ## Technologies
 - JSX (JavaScript XML)
 - Flexbox
@@ -24,6 +28,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Styled Components
 - Media Queries
 - Custom Hooks
+- Axios
+- Async/Await
+- API Integration
 
 ## Status
 The site is dynamically growing, along with the new front-end programming skills I'm learning.
