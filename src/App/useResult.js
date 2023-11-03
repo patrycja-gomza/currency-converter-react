@@ -11,7 +11,7 @@ export const useResult = (ratesData) => {
             from: selectedCurrency.code,
             to: "PLN",
             prevElement: +amount,
-            resultElement: +amount * conversionRate,
+            resultElement: +amount / conversionRate,
         });
     };
     return { result, calculateResult };
