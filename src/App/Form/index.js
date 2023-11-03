@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Fieldset, Legend, LabelTitle, StyledField, Container, Button } from "./styled";
 
 const Form = ({ calculateResult, ratesData }) => {
-    const [currency, setCurrency] = useState("CHF");
+    const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
 
     const onFormSubmit = (event) => {
