@@ -19,6 +19,7 @@ const Form = ({ calculateResult, ratesData }) => {
                         <LabelTitle> Wybierz walutę </LabelTitle>
                         <StyledField
                             as="select"
+                            value={currency}
                             onChange={(event) => setCurrency(event.target.value)}
                         >
                             {ratesData.data && Object.keys(ratesData.data).map((currency) => (
