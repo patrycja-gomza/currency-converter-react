@@ -4,17 +4,17 @@ const LoadingAndError = ({ ratesData, children }) => {
 
     return (
         <>
-            {(ratesData.loading || ratesData.error) ? (
+            {(ratesData.status === "loading" || ratesData.status === "error") ? (
                 <>
                     <Header>Kalkulator walut</Header>
 
-                    {ratesData.loading === true ? (
+                    {ratesData.status === "loading" ? (
                         <Message $loading>
                             Sekundka...
                             <br />
                             Ładuję kursy walut z Europejskiego Banku Centralnego 😎
                         </Message>
-                    ) : ratesData.error === true ? (
+                    ) : ratesData.status === "error" ? (
                         <Message $error>
                             Hmm... Coś poszło nie tak ☹️ Sprawdź, czy masz połączenie z internetem.
                             <br />

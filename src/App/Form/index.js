@@ -22,7 +22,7 @@ const Form = ({ calculateResult, ratesData }) => {
                             value={currency}
                             onChange={(event) => setCurrency(event.target.value)}
                         >
-                            {ratesData.data && Object.keys(ratesData.data).map((currency) => (
+                            {ratesData.data && Object.keys(ratesData.data.data).map((currency) => (
                                 <option
                                     key={currency}
                                     value={currency}
