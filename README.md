@@ -1,5 +1,5 @@
 # currency-converter-react by Patrycja Gomza
-![gif](https://raw.githubusercontent.com/patrycja-gomza/currency-converter-react/main/ReadmeAnimation%20.gif)
+![gif](https://raw.githubusercontent.com/patrycja-gomza/currency-converter-react/main/ReadmeAnimation2.gif)
 
 ## Demo
 https://patrycja-gomza.github.io/currency-converter-react/
